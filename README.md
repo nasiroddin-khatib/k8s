@@ -22,15 +22,17 @@ The application is exposed publicly using an NGINX Ingress Controller and custom
 
 # 🧭 Project Architecture
 
-Internet User  
-↓  
-NGINX Ingress Controller  
-↓  
-ClusterIP Service  
-↓  
-Deployment / Pod  
-↓  
-Persistent Volume (AWS EBS)
+User Request
+      ↓
+AWS Load Balancer
+      ↓
+NGINX Ingress Controller
+      ↓
+Ingress Rules
+      ↓
+ClusterIP Service
+      ↓
+Pod / Application
 
 ---
 
